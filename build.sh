@@ -24,6 +24,7 @@ git clone --depth=1 $DT_LINK $DT_PATH
 echo " ===+++ Building Recovery +++==="
 export ALLOW_MISSING_DEPENDENCIES=true
 export TW_THEME=portrait_hdpi
+export BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
 . build/envsetup.sh
 echo " source build/envsetup.sh done"
 lunch omni_${DEVICE}-eng || abort " lunch failed with exit status $?"
