@@ -9,22 +9,7 @@ platform:
 
 steps:
 - name: Start syncing && Compiling
+  image: brock5555/recovery
   commands:
 
-  - sudo update-alternatives --remove-all java
-  - sudo update-alternatives --remove-all javac
-  - sudo apt install openjdk-8-jdk
-  - sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
-  - apt install python3.9 python3-kerberos
-  - git clone https://github.com/Dazzler555/huiifzet.git scripts
-  - cd scripts
-  - sudo bash setup/android_build_env.sh
-  - sudo bash setup/install_android_sdk.sh
-  - sudo bash setup/install_android_sdk.sh
-  - git config --global color.ui false
-  - git config --global user.name "Brock555"
-  - git config --global user.email "77067332+Brock5555@users.noreply.github.com"
-  - cd ..
-  - git clone -b alpha https://github.com/Wi-nnie/drone-ci.git build
-  - cd build
   - bash build.sh
