@@ -2,10 +2,12 @@
 
 # Just a basic script U can improvise lateron asper ur need xD 
 
-MANIFEST="git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-10.0"
-DEVICE=lmi
-DT_LINK="https://github.com/hraj9258/twrp_lmi"
-DT_PATH=device/xiaomi/$DEVICE
+# Edited for Tecno Pop 2 Power
+
+MANIFEST="git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-8.1"
+DEVICE=B1p
+DT_LINK="https://github.com/Wi-nnie/B1p-Twrp-Device-Tree"
+DT_PATH=device/tecno/$DEVICE
 
 echo " ===+++ Setting up Build Environment +++==="
 apt install openssh-server -y
@@ -16,10 +18,12 @@ mkdir ~/twrp && cd ~/twrp
 echo " ===+++ Syncing Recovery Sources +++==="
 repo init --depth=1 -u $MANIFEST
 repo sync
+echo " ===+++ Cloning Device Tree +++==="
 git clone --depth=1 $DT_LINK $DT_PATH
 
 echo " ===+++ Building Recovery +++==="
 export ALLOW_MISSING_DEPENDENCIES=true
+export TW_THEME=portrait_hdpi
 . build/envsetup.sh
 echo " source build/envsetup.sh done"
 lunch omni_${DEVICE}-eng || abort " lunch failed with exit status $?"
