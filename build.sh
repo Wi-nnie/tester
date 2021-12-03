@@ -10,11 +10,10 @@ DT_LINK="https://github.com/Wi-nnie/B1p-Twrp-Device-Tree -b pbrp"
 DT_PATH=device/tecno/$DEVICE
 
 echo " ===+++ Setting up Build Environment +++==="
-apt get update
-apt install openjdk-8-jdk -y
 apt install openssh-server -y
 apt update --fix-missing
 apt install openssh-server -y
+apt install openjdk-8-jdk -y
 mkdir ~/twrp && cd ~/twrp
 
 echo " ===+++ Syncing Recovery Sources +++==="
