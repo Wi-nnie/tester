@@ -19,6 +19,7 @@ mkdir ~/twrp && cd ~/twrp
 echo " ===+++ Syncing Recovery Sources +++==="
 repo init --depth=1 -u $MANIFEST
 repo sync
+git clone https://gitlab.com/OrangeFox/misc/theme.git bootable/recovery/gui/theme
 echo " ===+++ Cloning Device Tree +++==="
 git clone --depth=1 $DT_LINK $DT_PATH
 
@@ -27,6 +28,7 @@ export ALLOW_MISSING_DEPENDENCIES=true
 export TW_THEME=portrait_hdpi
 export BOARD_RECOVERYIMAGE_PARTITION_SIZE=16384000
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
 export LC_ALL="C"
 . build/envsetup.sh
 echo " source build/envsetup.sh done"
