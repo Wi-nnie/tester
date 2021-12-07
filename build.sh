@@ -4,7 +4,7 @@
 
 # Edited for Tecno Pop 2 Power
 
-MANIFEST="https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0"
+MANIFEST="https://gitlab.com/OrangeFox/Manifest.git -b fox_8.1"
 DEVICE=B1p
 DT_LINK="https://github.com/Wi-nnie/B1p-Twrp-Device-Tree"
 DT_PATH=device/tecno/$DEVICE
