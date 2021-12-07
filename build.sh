@@ -4,7 +4,7 @@
 
 # Edited for Tecno Pop 2 Power
 
-MANIFEST="git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0"
+MANIFEST="git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-6.0"
 DEVICE=B1p
 DT_LINK="https://github.com/Wi-nnie/B1p-Twrp-Device-Tree"
 DT_PATH=device/tecno/$DEVICE
