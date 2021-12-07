@@ -6,7 +6,7 @@
 
 MANIFEST="git://github.com/SHRP/platform_manifest_twrp_omni.git -b v3_9.0"
 DEVICE=B1p
-DT_LINK="https://github.com/Wi-nnie/B1p-Twrp-Device-Tree -b pbrp"
+DT_LINK="https://github.com/Wi-nnie/B1p-Twrp-Device-Tree -b main"
 DT_PATH=device/tecno/$DEVICE
 
 echo " ===+++ Setting up Build Environment +++==="
