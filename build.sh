@@ -4,7 +4,7 @@
 
 # Edited for Tecno Pop 2 Power
 
-MANIFEST="git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-6.0"
+MANIFEST="git://github.com/SHRP/platform_manifest_twrp_omni.git -b v3_9.0"
 DEVICE=B1p
 DT_LINK="https://github.com/Wi-nnie/B1p-Twrp-Device-Tree -b pbrp"
 DT_PATH=device/tecno/$DEVICE
