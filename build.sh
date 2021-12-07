@@ -4,7 +4,7 @@
 
 # Edited for Tecno Pop 2 Power
 
-MANIFEST="git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-6.0"
+MANIFEST="https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0"
 DEVICE=B1p
 DT_LINK="https://github.com/Wi-nnie/B1p-Twrp-Device-Tree"
 DT_PATH=device/tecno/$DEVICE
@@ -26,6 +26,8 @@ echo " ===+++ Building Recovery +++==="
 export ALLOW_MISSING_DEPENDENCIES=true
 export TW_THEME=portrait_hdpi
 export BOARD_RECOVERYIMAGE_PARTITION_SIZE=16384000
+export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+export LC_ALL="C"
 . build/envsetup.sh
 echo " source build/envsetup.sh done"
 lunch omni_${DEVICE}-eng || abort " lunch failed with exit status $?"
