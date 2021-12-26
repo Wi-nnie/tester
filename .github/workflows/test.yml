@@ -29,7 +29,7 @@ jobs:
        - name: cloning repo
          continue-on-error: true
          run: |
-           git clone https://github.com/Wi-nnie/tester
+           git clone -b Wi-nnie-patch-1 https://github.com/Wi-nnie/tester
        - name: Running test 
          timeout-minutes: 300
          continue-on-error: true
