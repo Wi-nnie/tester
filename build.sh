@@ -4,7 +4,7 @@
 
 # Edited for Tecno Pop 2 Power
 
-MANIFEST="https://gitlab.com/OrangeFox/Manifest.git -b fox_7.1"
+MANIFEST="https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0"
 DEVICE=B1p
 DT_LINK="https://github.com/Wi-nnie/B1p-Twrp-Device-Tree"
 DT_PATH=device/tecno/$DEVICE
@@ -26,6 +26,7 @@ git clone --depth=1 $DT_LINK $DT_PATH
 echo " ===+++ Building Recovery +++==="
 export ALLOW_MISSING_DEPENDENCIES=true
 export TW_THEME=portrait_hdpi
+export BOARD_HAS_NO_REAL_SDCARD=true
 export BOARD_RECOVERYIMAGE_PARTITION_SIZE=16384000
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
