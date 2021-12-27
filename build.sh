@@ -17,6 +17,7 @@ apt install openjdk-8-jdk -y
 mkdir ~/twrp && cd ~/twrp
 
 echo " ===+++ Syncing Recovery Sources +++==="
+git config --global http.postBuffer 524288000
 repo init --depth=1 -u $MANIFEST
 repo sync
 git clone https://gitlab.com/OrangeFox/misc/theme.git bootable/recovery/gui/theme
